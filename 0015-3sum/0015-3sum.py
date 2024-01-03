@@ -9,13 +9,13 @@ class Solution:
             rt = len(nums) - 1
 
             while lt < rt:
-                current_sum = nums[i] + nums[lt] + nums[rt]
+                curSum = nums[i] + nums[lt] + nums[rt]
 
-                if current_sum == 0:
+                if curSum == 0:
                     zeroSum.add((nums[i], nums[lt], nums[rt]))
                     lt += 1
                     rt -= 1
-                elif current_sum < 0:
+                elif curSum < 0:
                     lt += 1
                 else:
                     rt -= 1
