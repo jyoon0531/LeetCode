@@ -20,9 +20,11 @@ class Solution:
             if len(digits) == L:
                 result.append(strs)
                 return
-            else:
-                for i in store[digits[L]]:
-                    dfs(L+1, strs+i)
+            
+            for i in store[digits[L]]:
+                dfs(L+1, strs+i)        
+            # dfs(1, 'a') dfs(1, 'b') dfs(1, 'c')
+            # dfs(2, 'ad') dfs(2, 'ae') dfs(2, 'af') ...
         
         dfs(0, '')
 
