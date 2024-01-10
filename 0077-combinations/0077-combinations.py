@@ -6,10 +6,11 @@ class Solution:
         def dfs(L, x):
             if L == k:
                 result.append(cm[:])
-            else:
-                for i in range(x, n+1):
-                    cm[L] = i
-                    dfs(L+1, i+1)
+                return
+            
+            for i in range(x, n+1):
+                cm[L] = i
+                dfs(L+1, i+1)
         
         dfs(0, 1)
 
